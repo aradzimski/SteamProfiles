@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-// import { HttpService } from './http.service';
+import { HttpService } from './http.service';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component'
@@ -20,7 +20,7 @@ import { SearchComponent } from './search/search.component'
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  // providers: [HttpService],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

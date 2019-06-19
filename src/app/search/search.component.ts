@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators, AbstractControl } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { HttpService } from '../http.service';
 
 @Component({
     selector: 'search',
@@ -8,22 +9,29 @@ import { FormGroup, FormBuilder, FormControl, Validators, AbstractControl } from
 })
 export class SearchComponent implements OnInit{
     searchForm: FormGroup;
-    constructor(private formBuilder: FormBuilder) { }
+    constructor(
+        private formBuilder: FormBuilder,
+        private service: HttpService
+        ) { }
 
     ngOnInit(){
         this.searchForm = this.formBuilder.group({
-            Searchbar: ['', [Validators.required, Validators.minLength(18), Validators.maxLength(18)]]
+            Searchbar: ['', [Validators.required, Validators.minLength(17), Validators.maxLength(17)]]
         });
     }
 
     onSubmit(): void {
         if (this.searchForm.valid) {
-            console.log(this.searchForm.get("Searchbar").value);
+            this.service.getUserGames(this.searchForm.get("Searchbar").value).toPromise().then(response => {
+                console.log(response);
+            })
+            this.service.getUser(this.searchForm.get("Searchbar").value).toPromise().then(response => {
+                console.log(response);
+            })
           }
           else {
-            console.log("Invalid form!");
+            console.log("Invalid Steam user ID.");
             return;
           }
     }
 }
-    
