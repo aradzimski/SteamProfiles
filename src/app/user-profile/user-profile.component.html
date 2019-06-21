@@ -1,3 +1,10 @@
-<p *ngIf="user">
-  {{ user.personaname }}
-</p>
+<div *ngIf="user" class="userProfile">
+  <div class="profileHeader">
+    <div class="userAvatar"><img src="{{ user.avatarfull }}"></div>
+    <div class="userInformations">
+      <div class="userName">{{ user.personaname }}</div>
+      <div class="userID">ID: {{ user.steamid }}</div>
+      <div class="userURL"><a href="{{ user.profileurl }}">{{ user.profileurl }}</a></div>
+    </div>
+  </div>
+</div>

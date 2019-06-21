@@ -1,4 +1,8 @@
-<form role="searchbox" [formGroup]="searchForm">
-    <input type='text' formControlName="Searchbar">
-    <button (click)='onSubmit()'>Search</button>
-</form>
+<div class="formSearch">
+    <div class="searchbar">
+        <form role="searchbox" [formGroup]="searchForm">
+            <input type='text' formControlName="Searchbar" placeholder="Enter user ID">
+            <button (click)='onSubmit()'>Search</button>
+        </form>
+    </div>
+</div>

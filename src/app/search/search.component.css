@@ -1,0 +1,28 @@
+.searchbar {
+    width:50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.searchbar input {
+    padding: 7px;
+    margin-top: 8px;
+    font-size: 17px;
+    width: 70%;
+    border: none;
+}
+
+.searchbar button {
+  padding: 7px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.searchbar button:hover {
+    background: #ccc;
+}
