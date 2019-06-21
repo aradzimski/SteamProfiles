@@ -10,5 +10,9 @@
   "exclude": [
     "src/test.ts",
     "src/**/*.spec.ts"
+  ],
+  "filesGlob": [
+    "./typings/**/*.ts",
+    "./src/client/**/*.ts"
   ]
 }

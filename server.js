@@ -16,7 +16,6 @@ app.get('/server/user/:id', function (httpRequest, httpResponse) {
         httpResponse.setHeader('Content-Type', 'application/json');
         httpResponse.setHeader('Access-Control-Allow-Origin', '*')
         httpResponse.send(steamHttpBody);
-        console.log(steamHttpResponse);
     });
 });
 
@@ -26,7 +25,6 @@ app.get('/server/user/games/:id', function (httpRequest, httpResponse) {
         httpResponse.setHeader('Content-Type', 'application/json');
         httpResponse.setHeader('Access-Control-Allow-Origin', '*')
         httpResponse.send(steamHttpBody);
-        console.log(steamHttpResponse);
     });
 });
 
