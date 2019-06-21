@@ -1,0 +1,53 @@
+.userGames {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.game {
+    background-color:rgb(98, 106, 119);
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    /* TRANSITION */
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+
+.game:hover {
+    background-color:rgba(98, 106, 119, 0.6);
+}
+
+.game img {
+    display:inline-block;
+}
+
+.gameName {
+    display:inline-block;
+    margin-left: 15px;
+    font-size: 18px;
+    width: 50%;
+    display: inline-block;
+}
+
+.gameName a, .gameName a:visited, .gameName a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.gameName a:hover {
+    color: rgb(84, 110, 228);
+}
+
+.gameTime {
+    display: inline-block;
+    float:right;
+}
+
+.gameInfo {
+    position: absolute;
+    top:35%;
+    width:75%;
+    margin-left: 200px;
+}

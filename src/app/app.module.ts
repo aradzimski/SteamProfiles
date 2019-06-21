@@ -10,14 +10,18 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component'
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { DataService } from './data.service';
+import { UserGamesComponent } from './user-games/user-games.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UserGamesComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
